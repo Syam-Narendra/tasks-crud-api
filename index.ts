@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+app.use((err: Error, _req: express.Request, res: express.Response, next: express.NextFunction) => {
     if (err instanceof SyntaxError && 'body' in err) {
       return res.status(400).json({
         error: "Invalid JSON format",
@@ -27,7 +27,7 @@ type Task = {
 
 const tasks: Task[] = [];
 
-app.get("/tasks", (req, res) => {
+app.get("/tasks", (_req, res) => {
   res.json(tasks);
 });
 
