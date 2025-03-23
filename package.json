@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "bun run index.ts",
-    "start": "bun run start",
+    "start": "ts-node index.ts",
     "build": "bun run build",
     "lint": "eslint .",
     "prettier": "prettier --write ."
