@@ -22,4 +22,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}/task-api:latest
+          tags: ghcr.io/syam-narendra/tasks-crud-api/task-api:latest
